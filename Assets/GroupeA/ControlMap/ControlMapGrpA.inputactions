@@ -1,5 +1,5 @@
 {
-    "name": "ControlMap",
+    "name": "ControlMapGrpA",
     "maps": [
         {
             "name": "Player",
@@ -31,13 +31,22 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "f3b48bbc-a997-45a4-a138-a754c5e9615d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "4d925a34-5a71-469f-b83c-cea71452f635",
-                    "path": "<Keyboard>/b",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -108,6 +117,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "LookInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "432ada3e-927d-47af-8893-6477dfab0966",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

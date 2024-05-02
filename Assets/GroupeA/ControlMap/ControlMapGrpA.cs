@@ -53,13 +53,22 @@ public partial class @ControlMapGrpA: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""f3b48bbc-a997-45a4-a138-a754c5e9615d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""4d925a34-5a71-469f-b83c-cea71452f635"",
-                    ""path"": ""<Keyboard>/b"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -132,6 +141,17 @@ public partial class @ControlMapGrpA: IInputActionCollection2, IDisposable
                     ""action"": ""LookInput"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""432ada3e-927d-47af-8893-6477dfab0966"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -171,6 +191,7 @@ public partial class @ControlMapGrpA: IInputActionCollection2, IDisposable
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_LookInput = m_Player.FindAction("LookInput", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         // PlayerHorse
         m_PlayerHorse = asset.FindActionMap("PlayerHorse", throwIfNotFound: true);
         m_PlayerHorse_Newaction = m_PlayerHorse.FindAction("New action", throwIfNotFound: true);
@@ -238,6 +259,7 @@ public partial class @ControlMapGrpA: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_LookInput;
+    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @ControlMapGrpA m_Wrapper;
@@ -245,6 +267,7 @@ public partial class @ControlMapGrpA: IInputActionCollection2, IDisposable
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @LookInput => m_Wrapper.m_Player_LookInput;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -263,6 +286,9 @@ public partial class @ControlMapGrpA: IInputActionCollection2, IDisposable
             @LookInput.started += instance.OnLookInput;
             @LookInput.performed += instance.OnLookInput;
             @LookInput.canceled += instance.OnLookInput;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -276,6 +302,9 @@ public partial class @ControlMapGrpA: IInputActionCollection2, IDisposable
             @LookInput.started -= instance.OnLookInput;
             @LookInput.performed -= instance.OnLookInput;
             @LookInput.canceled -= instance.OnLookInput;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -344,6 +373,7 @@ public partial class @ControlMapGrpA: IInputActionCollection2, IDisposable
         void OnFire(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnLookInput(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
     public interface IPlayerHorseActions
     {

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 277578297189080450}
   - component: {fileID: 3198359035456676528}
+  - component: {fileID: 3235372210692042082}
+  - component: {fileID: 330453468894389754}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -32,6 +34,7 @@ Transform:
   m_Children:
   - {fileID: 8404751158906834394}
   - {fileID: 696208202469151275}
+  - {fileID: 643830021116376567}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3198359035456676528
@@ -46,9 +49,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f792778628075674991c3695fb10fcd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnBall: {fileID: 0}
   transformCamPivot: {fileID: 696208202469151275}
+  rb: {fileID: 0}
+  maxVelocity: 0
   speed: 5
   camSensitive: 15
+  clampAngle: {x: 0, y: 0}
+  minAngle: 0
+  maxAngle: 0
+--- !u!114 &3235372210692042082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226826905788304115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a94f045350e24f44f84092452ed34d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &330453468894389754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226826905788304115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f832dd168637a41ae631b4b8d4efdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 1394931159352304394, guid: 5ae231ccd39ef2e4ca4fb290f47c11e3, type: 3}
+  spotSpawn: {fileID: 643830021116376567}
+  ForceEjection: 50
 --- !u!1 &7953417244568786389
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,6 +207,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8611295867783620103}
+  m_Father: {fileID: 277578297189080450}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9025894266574662700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 643830021116376567}
+  m_Layer: 0
+  m_Name: FireSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &643830021116376567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9025894266574662700}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.523, y: 1.369, z: 0.534}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 277578297189080450}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8298187820536474161
