@@ -174,8 +174,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb289c983feebe459cf328066b9f352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 2598196678898374231}
+  MaxVelocity: 500
   CameraPivotTransform: {fileID: 3652939975509978300}
-  speed: 15
+  speed: 50
   cameraSensibility: 15
   minMaxAngleCam: {x: 0, y: 0}
 --- !u!54 &8577108139354038853
@@ -187,7 +189,7 @@ Rigidbody:
   m_GameObject: {fileID: 9144207026026683690}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -203,7 +205,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &8337780642155849928
 CapsuleCollider:
@@ -354,13 +356,43 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big Vegas@Unarmed Turn Left 90
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2223639932434330405, guid: 66c44e15761edb542b0588017cc75973, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 66c44e15761edb542b0588017cc75973, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2598196678898374231}
   m_SourcePrefab: {fileID: 100100000, guid: 66c44e15761edb542b0588017cc75973, type: 3}
 --- !u!4 &4964974957012450548 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 66c44e15761edb542b0588017cc75973, type: 3}
   m_PrefabInstance: {fileID: 4858710098401467167}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5741230559051359822 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 66c44e15761edb542b0588017cc75973, type: 3}
+  m_PrefabInstance: {fileID: 4858710098401467167}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2598196678898374231
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5741230559051359822}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b55547a199307f43b31e03edeebc3d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
