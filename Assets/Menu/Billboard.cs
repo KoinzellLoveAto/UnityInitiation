@@ -21,7 +21,7 @@ public class Billboard : MonoBehaviour
         if (mainCamera != null)
         {
             // Obtenir la direction vers la caméra
-            Vector3 cameraDirection = mainCamera.transform.position - transform.position;
+            Vector3 cameraDirection =  transform.position - mainCamera.transform.position;
 
             // Tourner le billboard pour faire face à la caméra
             transform.LookAt(transform.position + cameraDirection);
