@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 public class PlayerControllerGA : MonoBehaviour
 {
     public PlayerSpawnBall spawnBall;
+    public Animator animator;
 
     public Transform transformCamPivot;
     public Rigidbody rb;
@@ -54,7 +54,7 @@ public class PlayerControllerGA : MonoBehaviour
 
     public void Fire_Canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-
+        animator.SetBool("IsDeath", true);
         spawnBall.SpawnPrefab(timeFirePress);
         fireIsDown = false;
         timeFirePress = 0;
@@ -89,11 +89,17 @@ public class PlayerControllerGA : MonoBehaviour
 
         rb.AddForce(forwardCam * moveInput.y * speed + RightCam * moveInput.x * speed);
 
-        if (MathF.Abs(rb.velocity.magnitude) > maxVelocity)
+        float currentVelocity = MathF.Abs(rb.velocity.magnitude);
+
+        if (currentVelocity > maxVelocity)
         {
             Vector3 dirVelo = rb.velocity.normalized;
             rb.velocity = dirVelo * (maxVelocity);
         }
+
+        float mappedValue = Remap(currentVelocity, 0, maxVelocity, 0, 1);
+        animator.SetFloat("Velocity", mappedValue);
+
 
 
         Vector2 lookInput = controlMap.Player.LookInput.ReadValue<Vector2>();
@@ -125,5 +131,22 @@ public class PlayerControllerGA : MonoBehaviour
             return angle + 360f;
         else
             return angle;
+    }
+
+
+
+    float Remap(float value, float fromMin, float fromMax, float toMin, float toMax)
+    {
+
+        // Assurer que la valeur est dans la plage d'origine
+        value = Mathf.Clamp(value, fromMin, fromMax);
+
+        // Calculer le pourcentage de la valeur dans la plage d'origine
+        float normalizedValue = (value - fromMin) / (fromMax - fromMin);
+
+        // Remapper la valeur dans la plage de destination
+        float remappedValue = (normalizedValue * (toMax - toMin)) + toMin;
+
+        return remappedValue;
     }
 }

@@ -1441,7 +1441,7 @@ PrefabInstance:
       objectReference: {fileID: 1047011427}
     - target: {fileID: 3198359035456676528, guid: 94fd6f6ca29ba634e95321799d055981, type: 3}
       propertyPath: speed
-      value: 600
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3198359035456676528, guid: 94fd6f6ca29ba634e95321799d055981, type: 3}
       propertyPath: maxAngle
@@ -1457,7 +1457,7 @@ PrefabInstance:
       objectReference: {fileID: 8543925129321990847}
     - target: {fileID: 3198359035456676528, guid: 94fd6f6ca29ba634e95321799d055981, type: 3}
       propertyPath: maxVelocity
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3198359035456676528, guid: 94fd6f6ca29ba634e95321799d055981, type: 3}
       propertyPath: camSensitive
