@@ -1471,6 +1471,10 @@ PrefabInstance:
       propertyPath: clampAngle.y
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 3198359035456676528, guid: 94fd6f6ca29ba634e95321799d055981, type: 3}
+      propertyPath: rotationSpeed
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6226826905788304115, guid: 94fd6f6ca29ba634e95321799d055981, type: 3}
       propertyPath: m_Name
       value: Player

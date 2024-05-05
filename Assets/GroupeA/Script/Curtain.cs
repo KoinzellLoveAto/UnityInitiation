@@ -9,11 +9,16 @@ public class Curtain : MonoBehaviour
 
     public void Initialize()
     {
+        // maniere de get automatiquement une component AUTOMATIQUEMENT sur le MËME GAMEOBJECT que le script
         rb ??= GetComponent<Rigidbody>();
     }
 
+    
     public void Drop()
     {
-        rb.isKinematic = false;
+        //iskinematic = "freeze tout movement" relatif a la physique
+
+
+        rb.isKinematic = false;// on remet les movement physique pour faire la chute du rideau
     }
 }
