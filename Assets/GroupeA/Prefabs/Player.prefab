@@ -53,12 +53,13 @@ MonoBehaviour:
   animator: {fileID: 5195693257422839420}
   transformCamPivot: {fileID: 696208202469151275}
   rb: {fileID: 0}
+  CharacterMesh: {fileID: 9216753022196094816}
   maxVelocity: 0
   speed: 5
   camSensitive: 15
-  clampAngle: {x: 0, y: 0}
   minAngle: 0
   maxAngle: 0
+  rotationSpeed: 20
   timeFirePress: 0
   fireIsDown: 0
 --- !u!114 &3235372210692042082

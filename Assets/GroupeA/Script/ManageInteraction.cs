@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ManageInteraction : MonoBehaviour
 {
+    // reference sur unity
     public Window parent;
 
 

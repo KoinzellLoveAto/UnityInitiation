@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class PlayerSpawnBall : MonoBehaviour
 {
+    //variable ref unity
     public CubeBullet Prefab;
     public Transform spotSpawn;
+
+    //variable gerant la force.
     public float ForceEjection;
     public void SpawnPrefab(float duration)
     {
+        // remap de la valeur pour faire le lien entre la duration appuyer et la force final a donné a l'(objet
         float force = Remap(duration, 0, 2, 0, ForceEjection);
+
+        // on crée un objet dans la scene, a une position donnée.
         CubeBullet obj = Instantiate(Prefab, spotSpawn);
+
+        // et on appel le script pour "l'initialisé"
         obj.InitWithForce(Camera.main.transform.forward, force);
     }
 

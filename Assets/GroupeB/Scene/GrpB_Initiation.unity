@@ -758,6 +758,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 554103839}
     - target: {fileID: 5193464836918749733, guid: 37914d022d87be8479afd75d9e5b4000, type: 3}
+      propertyPath: rotationSpeed
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193464836918749733, guid: 37914d022d87be8479afd75d9e5b4000, type: 3}
       propertyPath: minMaxAngleCam.x
       value: -45
       objectReference: {fileID: 0}

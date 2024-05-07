@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+    //gère la logique des bouttons défini dans le menu.
     public void HandleClickButtonGroupA()
     {
         Debug.Log("Click sur groupe A");

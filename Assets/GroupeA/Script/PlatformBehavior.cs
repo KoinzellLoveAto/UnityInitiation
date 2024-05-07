@@ -5,7 +5,7 @@ public class PlatformBehavior : MonoBehaviour
 {
     public float speed;
 
-
+    // reference sur unity
     public Transform posfrom;
     public Transform posTo;
 
