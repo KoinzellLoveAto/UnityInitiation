@@ -57,7 +57,7 @@ MonoBehaviour:
   CharacterMesh: {fileID: 9216753022196094816}
   maxVelocity: 0
   speed: 5
-  camSensitive: 15
+  camSensitive: 20
   minAngle: 0
   maxAngle: 0
   rotationSpeed: 20
