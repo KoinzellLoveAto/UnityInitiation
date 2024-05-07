@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3198359035456676528}
   - component: {fileID: 3235372210692042082}
   - component: {fileID: 330453468894389754}
+  - component: {fileID: 5263239082693235849}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -89,6 +90,21 @@ MonoBehaviour:
   Prefab: {fileID: 1394931159352304394, guid: 5ae231ccd39ef2e4ca4fb290f47c11e3, type: 3}
   spotSpawn: {fileID: 643830021116376567}
   ForceEjection: 50
+--- !u!114 &5263239082693235849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226826905788304115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e56dc8a691f49c47bd71f46564ffc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origine: {fileID: 2679735888727555926}
+  CamTransform: {fileID: 8611295867783620103}
+  distance: 20
 --- !u!1 &7953417244568786389
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,6 +197,37 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7953417244568786389}
   m_Enabled: 1
+--- !u!1 &8403773830723512365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2679735888727555926}
+  m_Layer: 0
+  m_Name: RayOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2679735888727555926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8403773830723512365}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.65, z: 0.449}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8404751158906834394}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8927267074074509314
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +345,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: cb6f63c7f79bbad4b972718b6422b411, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2679735888727555926}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cb6f63c7f79bbad4b972718b6422b411, type: 3}
       insertIndex: -1
