@@ -32,6 +32,37 @@ Transform:
   - {fileID: 3599846317230502396}
   m_Father: {fileID: 2337430387048967032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3430694893106220926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4157746026345311589}
+  m_Layer: 0
+  m_Name: OriginRayCast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4157746026345311589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3430694893106220926}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.625, z: 0.67}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2337430387048967032}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4239950627399482039
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +168,7 @@ GameObject:
   - component: {fileID: 8577108139354038853}
   - component: {fileID: 8337780642155849928}
   - component: {fileID: 8211932243983531967}
+  - component: {fileID: 772450254843276753}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -160,6 +192,7 @@ Transform:
   - {fileID: 2636090258936373277}
   - {fileID: 4964974957012450548}
   - {fileID: 3652939975509978300}
+  - {fileID: 4157746026345311589}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5193464836918749733
@@ -246,6 +279,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236923d438fb7be4b928e81d9fe38352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &772450254843276753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144207026026683690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd63f8e48f27214582f10040b4c3257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  from: {fileID: 4157746026345311589}
+  transformCam: {fileID: 3599846317230502396}
+  distanceInteraction: 60
 --- !u!1001 &1935640536181306129
 PrefabInstance:
   m_ObjectHideFlags: 0

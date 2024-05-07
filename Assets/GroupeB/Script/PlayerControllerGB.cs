@@ -63,7 +63,7 @@ public class PlayerControllerGB : MonoBehaviour
         spawner.SpawnItem();
         
         // on communique avec l'animateur pour jouer l'animation de mort.
-        animator.SetBool("IsDeath", true);
+        // animator.SetBool("IsDeath", true);
     }
 
     // Update is called once per frame
