@@ -57,7 +57,7 @@ MonoBehaviour:
   CharacterMesh: {fileID: 9216753022196094816}
   maxVelocity: 0
   speed: 5
-  camSensitive: 20
+  camSensitive: 35
   minAngle: 0
   maxAngle: 0
   rotationSpeed: 20
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   origine: {fileID: 2679735888727555926}
   CamTransform: {fileID: 8611295867783620103}
-  distance: 60
+  distance: 10
 --- !u!1 &7953417244568786389
 GameObject:
   m_ObjectHideFlags: 0
